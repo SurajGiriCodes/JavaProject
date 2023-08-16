@@ -1,0 +1,329 @@
+@charset "UTF-8";
+
+* {
+
+margin: 0;
+
+padding: 0;
+
+box-sizing: border-box;
+
+}
+
+body {
+	width: 100%;
+}
+
+
+h4 {
+	 font-size: 30px;
+	 color: black;
+}
+#header{
+
+display: flex;
+
+align-items: center;
+
+justify-content: space-between;
+
+padding: 20px 80px;
+
+background: cyan;
+
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+
+z-index: 999;
+
+position: fixed;
+
+left: 0;
+
+width: 100%;
+
+}
+
+
+
+#navbar{
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+}
+
+#navbar{
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+}
+
+#navbar li img {
+
+width: 38px;
+
+height: 37px;
+
+margin-left: -10px;
+
+transition: 0.3s ease;
+
+}
+
+li:hover img {
+
+transform: scale(1.2);
+
+}
+
+#navbar li{
+
+list-style: none;
+
+padding: 0 20px;
+
+position: relative;
+
+
+}
+
+#navbar li a {
+
+text-decoration: none;
+
+font-size: 19px;
+
+font-weight: 600;
+
+color: black;
+
+transition: 0.3s ease;
+
+}
+
+
+#navbar li a:hover,
+
+#navbar li a.active {
+
+color: seagreen;
+
+}
+
+#navbar li a.active::after,
+
+#navbar li a:hover::after{
+
+width: 30%;
+
+height: 2px;
+
+background: seagreen;
+
+position: absolute;
+
+bottom: -4px;
+
+left: 20px;
+
+transition: 0.3s ease;
+
+}
+
+
+/* *********** media queries *********** */
+@media all and (max-width: 990px) {
+  .flex-container {
+    flex-direction: column;
+  }
+  
+  .logo {
+  margin: 0;
+}
+  
+  .navigation  {
+    width: 100%;
+    justify-content: space-around;
+  }
+}
+
+
+/* ****** ****** */
+@media all and (max-width: 600px) {
+ 
+  .logo {
+    margin: .25em 0;
+    align-self: left; /* align the logo to the left side of 'flex-container' */
+}
+  
+  .navigation {
+    flex-direction: column;
+  }
+  
+  .navigation a { 
+    text-align: center; 
+    padding: 10px;
+    border-top: 1px solid rgba(255,255,255,0.3); 
+    border-bottom: 1px solid rgba(0,0,0,0.1); 
+  }
+  
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
+}
+
+li > form > input{
+	text-align: center;
+    white-space: normal;
+    padding: 8px;
+    margin: 7px;
+}
+
+.my-button{
+   border: none;
+  color: #fff;
+  background-image: linear-gradient(30deg, #0400ff, #4ce3f7);
+  border-radius: 20px;
+  background-size: 100% auto;
+  font-family: inherit;
+  font-size: 17px;
+  padding: 0.6em 0.8em;
+  height: 40px; /* increase height */
+  width: 120px;
+}
+
+.my-button:hover {
+ background-position: right center;
+ background-size: 200% auto;
+ -webkit-animation: pulse 2s infinite;
+ animation: pulse512 1.5s infinite;
+}
+
+@keyframes pulse512 {
+ 0% {
+  box-shadow: 0 0 0 0 #05bada66;
+ }
+
+ 70% {
+  box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+ }
+
+ 100% {
+  box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+ }
+}
+
+caption{
+	text-align: left;
+	 font-weight: bold;
+	  font-size: 30px;
+	  margin-bottom: 20px;
+	  margin-left: 20px;
+}
+
+/* Center the form */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Style the table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  padding-left: 90px; 
+  margin-top: 100px;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+  
+}
+
+th {
+  background-color: green;
+  font-size: 18px; 
+  font-weight: bold; 
+  font-family: Monaco, monospace; 
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+  color: white;
+}
+
+td.unit-price {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.shopping-logo {
+width: 38px;
+height: 37px;
+margin-left: -10px;
+transition: 0.3s ease;
+
+}
+
+
+.shopping-logo:hover  {
+
+transform: scale(1.2);
+
+}
+/* Style the Buy Now button */
+.shop-now-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.shop-now-button:hover {
+  background-color: #3e8e41; /* change the background color */
+}
+
+
+.product-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  padding: 10px;
+}
+
+.product-box img {
+  max-height: 100%;
+  
+}
+
+.product-box span {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+
+
+
